@@ -37,13 +37,13 @@ class Product extends Model
     protected $casts = [];
 
     /**
-     * Returns the cart's owner
+     * Returns the carts where the product is
      *
-     * @return BelongsTo
+     * @return BelongsToMany
      */
 
-    protected function user() : BelongsTo
+    protected function carts() : BelongsToMany
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsToMany(Cart::class,'product_cart','product_id','cart_id');
     }
 }
