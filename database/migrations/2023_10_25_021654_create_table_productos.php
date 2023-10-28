@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->float('price');
-            $table->string('image_route');
+            $table->mediumInteger('price');
+            $table->string('image_route')->nullable();
             $table->timestamps();
         });
     }
