@@ -1,0 +1,49 @@
+/********************************************************/
+/*                         Hero                         */
+/********************************************************/
+
+/****************************/
+/*     Pantallas chicas     */
+/****************************/
+
+@media (max-width: 991.98px) {
+
+    #containerImagenHero {
+        display: none;
+    }
+
+}
+
+/****************************/
+/*     Pantallas grandes    */
+/****************************/
+
+@media (min-width: 992px) {
+
+    #hero_grande {
+        max-width: 115% !important;
+    }
+
+}
+
+/****************************/
+/*          General         */
+/****************************/
+
+.dark-light-blue {
+    background-color: rgba(169, 198, 217, 0.8) !important;
+}
+
+#descubrir_boton {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.35s, box-shadow 0.35s;
+}
+
+#descubrir_boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+#containerHero {
+    background-color: #e7f9ff52;
+}

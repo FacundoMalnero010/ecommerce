@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-100">
 
     <head>
         <meta charset="utf-8">
@@ -16,26 +16,34 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         <!-- CSS -->
-
-        <link rel="stylesheet" href="{{ asset('css/index/index.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/index/nav.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/index/hero.css') }}">
 
         <!-- Bootstrap 5.3.2 -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
 
-    <body class="antialiased dull-white">
+    <body class="antialiased dull-white h-100 d-flex justify-content-center align-items-center">
 
-        <!--
-            Este id es fundamental para el funcionamiento del desplegable
-            al momento de achicarse la pantalla. Por eso se pasa como una
-            variable, así evitamos errores
-         -->
+        <header>
 
-        <x-index.nav_bar
-            idNavItemsContainer="nav_items_container"
-        />
+            <!--
+                Este id es fundamental para el funcionamiento del desplegable
+                al momento de achicarse la pantalla. Por eso se pasa como una
+                variable, así evitamos errores
+             -->
 
+            <x-index.nav_bar
+                idNavItemsContainer="nav_items_container"
+            />
 
+        </header>
+
+        <section class="d-flex justify-center align-items-center mt-5">
+
+            <x-index.hero/>
+
+        </section>
 
     </body>
 
